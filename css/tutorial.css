@@ -1,0 +1,116 @@
+/*vamos começar declarando as variáveis 
+toda variável deve ter $ como indicador*/
+/*mixin que cria um reset de alguns elementos*/
+/* line 20, ../sass/tutorial.scss */
+body {
+  font-family: verdana, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../sass/tutorial.scss */
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+/* line 33, ../sass/tutorial.scss */
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 38, ../sass/tutorial.scss */
+header {
+  width: 1024px;
+  text-align: center;
+  background-color: #405262;
+  padding: 20px 0 20px 0;
+}
+
+/*navegação com propriedades aninhadas*/
+/* line 49, ../sass/tutorial.scss */
+nav ul {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 55, ../sass/tutorial.scss */
+nav li {
+  width: 86px;
+  float: left;
+  margin: 20px 16px 20px 0;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  line-height: 40px;
+  background-image: linear-gradient(to bottom, #405262 -90%, #ffffff);
+}
+/* line 66, ../sass/tutorial.scss */
+nav li:last-child {
+  margin: 20px 0 20px 0;
+}
+/* line 70, ../sass/tutorial.scss */
+nav a {
+  color: #999999;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* line 79, ../sass/tutorial.scss */
+section {
+  width: 1024px;
+  height: 295px;
+  clear: both;
+  text-align: center;
+  background-color: #999999;
+  text-align: center;
+}
+/* line 87, ../sass/tutorial.scss */
+section h2 {
+  color: #405262;
+  padding: 20px 0 20px 0;
+}
+/* line 92, ../sass/tutorial.scss */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 40px;
+  display: block;
+}
+/* line 99, ../sass/tutorial.scss */
+section li {
+  width: 290px;
+  height: 158px;
+  border-radius: 4px;
+  background-color: white;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+}
+/* line 109, ../sass/tutorial.scss */
+section p {
+  margin: 0;
+  padding: 0;
+  color: #999999;
+  text-align: justify;
+  /* propriedades aninhadas para font*/
+  font-family: Times New Roman, serif;
+  font-style: normal;
+  font-size: 14px;
+}
+
+/* line 124, ../sass/tutorial.scss */
+footer {
+  width: main-width;
+  clear: both;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  color: #bfbfbf;
+  font-size: 11px;
+}

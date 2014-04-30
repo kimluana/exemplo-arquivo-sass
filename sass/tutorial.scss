@@ -1,0 +1,131 @@
+
+/*vamos começar declarando as variáveis 
+toda variável deve ter $ como indicador*/
+
+$blue: #405262;
+$white: #ffffff;
+$gray: #999999;
+$main-width: 1024px;
+$main-font: 30px;
+$main-text: 14px;
+$main-radius: 4px;
+$main-padding: 20px 0 20px 0;
+
+/*mixin que cria um reset de alguns elementos*/   
+@mixin reset{
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: verdana, sans-serif;
+background-color: lighten($gray, 35%); //aqui a cor $gray foi clareada 35%
+@include reset;// incluide para o mixin criado acima
+}
+
+h1{
+@include reset;
+font-size: $main-font + 10px;//operação matemática
+color: lighten($gray, 35%);
+text-transform: uppercase;    
+}
+
+.container {
+width: $main-width;
+margin: 0 auto;
+}
+
+header{
+width: $main-width;
+text-align: center;
+background-color: $blue;
+padding: $main-padding;    
+}
+
+/*navegação com propriedades aninhadas*/
+
+nav {
+    
+ul{
+list-style: none;
+display: block;
+@include reset;
+}
+    
+li{
+width: 86px;
+float: left;
+margin:   20px 16px 20px 0;
+height: 40px;
+border: 1px solid lighten($gray, 30%);
+text-align: center;
+line-height:  40px;
+background-image: linear-gradient(to bottom, $blue -90%, $white) ;//o degrade do fundo dos botões
+} 
+
+li:last-child {
+margin:   $main-padding
+}
+    
+a {
+color: $gray;
+font-size: $main-font - 17px;
+text-decoration: none;    
+}    
+ 
+}
+
+
+section {
+width: $main-width;
+height:  295px;
+clear:both;
+text-align: center;
+background-color: $gray;
+text-align: center;    
+    
+h2{
+color: $blue; 
+padding: $main-padding;
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0 0 0 40px;
+display: block; 
+}
+    
+li{
+width: 290px;
+height: 158px;
+border-radius: $main-radius;
+background-color: $white;
+float: left;    
+margin-right: 10px;    
+padding: 10px;
+}
+    
+p{
+@include reset;
+color: $gray;
+text-align: justify;
+    
+/* propriedades aninhadas para font*/
+   font: {
+       family: Times New Roman, serif;
+       style: normal;
+       size: $main-text;
+ }
+    
+}    
+}
+
+footer{
+width: main-width;
+clear: both;  
+text-align: center;
+padding: $main-padding;
+color: lighten($gray, 15%);
+font-size: $main-text - 3;
+}
